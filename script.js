@@ -49,49 +49,10 @@ const monitores = [{
     },
 ]
 let arrayCompleto = [monitores, placas]
-function busqueda1() {
-    let valortotal = parseInt(prompt("Ingrese su presupuesto total, tenga en cuenta que el precio minimo es de $187099 "))
-    if (isNaN(valortotal)) {
-        alert("Ingrese numeros válidos")
-    }
-    if (valortotal < 187099) {
-        alert("Su monto no puede ser menor a 187099")
-    }
-    placas.filter(producto => producto.precio >= valortotal)
-    alert(`Los articulos que puede adquirir le figurarán en la consola`)
-    console.log(`Estos son los siguientes articulos que puede comprar: `)
-    console.log(placas)
-}   
-function busqueda2() {
-    let valortotal = parseInt(prompt("Ingrese su presupuesto total, tenga en cuenta que el precio minimo es de $187099 "))
-    if (isNaN(valortotal)) {
-        alert("Ingrese numeros válidos")
-    }
-    if (valortotal < 187099) {
-        alert("Su monto no puede ser menor a 187099")
-    }
-    monitores.filter(producto => producto.precio >= valortotal)
-    alert(`Los articulos que puede adquirir le figurarán en la consola`)
-    console.log(`Estos son los siguientes articulos que puede comprar: `)
-    console.log(monitores)
-}
-do {
-    let productosAComprar = parseInt(prompt("Ingrese un numero: 1 (Placas de Video) o 2 (Monitores)"));
-    if (productosAComprar === 1) {
-        busqueda1()
-        break
-    }
-    if (productosAComprar === 2) {
-        busqueda2()
-        break
-    }
-    if (productosAComprar != 1 && productosAComprar != 2) {
-        alert("Ingrese un numero de los antes mencionados")
-    }
-} while (true)
 
 let listaPlacas = document.getElementById("PlacasDeVideo")
 let listaMonitores = document.getElementById("Monitores")
+
 
 for (let placa of placas) {
     listaPlacas.innerHTML += `
@@ -100,6 +61,7 @@ for (let placa of placas) {
             <strong> Precio contado: ${placa.precio}</strong>
             <strong> Precio con cuotas: ${placa.precio_coutas}</strong>
             <div class="imagen"><img src="${placa.imagen}"</div>
+            <div><button id="btn">Comprar</button></div> 
             </div>
     `
 }
@@ -111,6 +73,15 @@ for (let monitor of monitores) {
     <strong> Precio contado: ${monitor.precio}</strong>
     <strong> Precio con cuotas: ${monitor.precio_coutas}</strong>
     <div class="imagen"><img src="${monitor.imagen}"</div>
+    <div><button id="btn">Comprar</button></div> 
     </div>
 `
 }
+
+let boton = document.getElementById("btn")
+let mensaje_compra= document.getElementById("Compra")
+
+function comprar(){
+    mensaje_compra.innerHTML+= `<div class="estilo_compra">Se realizó su compra!</div>`
+}
+boton.addEventListener("click", comprar)
