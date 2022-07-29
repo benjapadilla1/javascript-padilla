@@ -105,7 +105,6 @@ boton_placa2.addEventListener('click', () => {
     <div class="card-body">
     <h5 class="card-title">${JSON.stringify(placa2.nombre)} </h5>
     <p class="card-text">${placa2.precio}</p>
-    <button class="btn btn-danger" id="Boton_borrar">Eliminar producto</button>
     </div>
 </div>` 
 })
