@@ -1,5 +1,11 @@
 body{
-    background-color: rgba(184, 238, 211, 0);
+    background-color: rgba(169, 145, 56, 0);
+    color: black;
+    transition: ease 1s;
+}
+.darkMode{
+    background-color: black;
+    color: white;
 }
 h1{
     text-align: center;
@@ -15,7 +21,7 @@ h1{
     height: 400px;
     margin: 20px;
     margin-bottom: 150px;
-    background-color: rgb(76, 126, 179);
+    background-color: burlywood;
     border-radius: 5px;
 }
 h3{
@@ -52,5 +58,5 @@ footer {
     width: 200px;
     height: 75px;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color:burlywood;
 }
