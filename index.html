@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce placas y monitores</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <title>Tienda</title>
 </head>
-<body>    
+
+<body>
     <header>
-        <h1>
-            Productos disponibles
-        </h1>
-        <button id = "botonDarkMode" class = "btn btn-dark">Modo oscuro</button>
-        <button id = "botonLightMode" class = "btn btn-light">Modo claro</button>
+        <button id="botonDarkMode" class="btn btn-dark">Modo oscuro</button>
+        <button id="botonLightMode" class="btn btn-light">Modo claro</button>
+        <div class="container">
+            <h1 class="text-center">TIENDA</h1>
+        </div>
     </header>
     <main>
         <div id="PlacasDeVideo"></div>
         <div id="Monitores"></div>
-        <div id="boton"></div>
-        <button id="botonCarrito" class="btn btn-dark">Su carrito de compras</button>
-        <div id="carrito_compra"></div>
+        <div id="carro_de_compra"></div>
     </main>
     <footer>
         <div class="footer_redes">
             Seguinos en nuestras redes sociales!
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="./tienda.js"></script>
+
 </body>
 
 </html>
