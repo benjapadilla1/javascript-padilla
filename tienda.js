@@ -1,31 +1,33 @@
+
 const botonDarkMode = document.getElementById("botonDarkMode")
 const botonLightMode = document.getElementById("botonLightMode")
 let darkMode
 if (localStorage.getItem("theme")) {
-    darkMode = localStorage.getItem("theme")
+  darkMode = localStorage.getItem("theme")
 } else {
-    localStorage.setItem("theme", "light")
+  localStorage.setItem("theme", "light")
 }
 if (darkMode == "dark") {
-    document.body.classList.add("darkMode")
+  document.body.classList.add("darkMode")
 }
 
 botonDarkMode.addEventListener("click", () => {
-    document.body.classList.add("darkMode")
-    localStorage.setItem("theme", "dark")
+  document.body.classList.add("darkMode")
+  localStorage.setItem("theme", "dark")
 })
 botonLightMode.addEventListener("click", () => {
-    document.body.classList.remove("darkMode")
-    localStorage.setItem("theme", "light")
+  document.body.classList.remove("darkMode")
+  localStorage.setItem("theme", "light")
 })
+
 class Producto {
   constructor(nombre, precio, precio_coutas, categoria, imagen, boton) {
-      this.nombre = nombre
-      this.precio = precio
-      this.precio_coutas = precio_coutas
-      this.categoria = categoria
-      this.imagen = imagen
-      this.boton = boton
+    this.nombre = nombre
+    this.precio = precio
+    this.precio_coutas = precio_coutas
+    this.categoria = categoria
+    this.imagen = imagen
+    this.boton = boton
   }
 
 }
@@ -36,9 +38,9 @@ const placa4 = new Producto("PLACA DE VIDEO MSI NVIDIA GEFORCE RTX 3080 TI VENTU
 
 const placas = [placa1, placa2, placa3, placa4]
 
-const monitor1 = new Producto("MONITOR 32 VIEWSONIC ELITE XG320U 150HZ 4K", 34.6499 , "12 cuotas sin interés de $38114.92", "monitor", "fotos/monitor_1.png",)
-const monitor2 = new Producto("MONITOR 49 SAMSUNG LC49J890D SUPER ULTRAWIDE CURVO GAMING 144HZ", 259.859, "259859,12 cuotas sin interés de $28584", "monitor", "fotos/monitor_2.png", )
-const monitor3 = new Producto("MONITOR 27 ZOWIE XL2746K LED", 202.109, "12 cuotas sin interés de $22232", "monitor", "fotos/monitor_3.png", )
+const monitor1 = new Producto("MONITOR 32 VIEWSONIC ELITE XG320U 150HZ 4K", 346.499, "12 cuotas sin interés de $38114.92", "monitor", "fotos/monitor_1.png",)
+const monitor2 = new Producto("MONITOR 49 SAMSUNG LC49J890D SUPER ULTRAWIDE CURVO GAMING 144HZ", 259.859, "259859,12 cuotas sin interés de $28584", "monitor", "fotos/monitor_2.png",)
+const monitor3 = new Producto("MONITOR 27 ZOWIE XL2746K LED", 202.109, "12 cuotas sin interés de $22232", "monitor", "fotos/monitor_3.png",)
 const monitor4 = new Producto("MONITOR 27 VIEWSONIC ELITE XG270QG 165HZ", 187.099, "12 cuotas sin interés de $20580.92", "monitor", "fotos/monitor_4.png",)
 
 const monitores = [monitor1, monitor2, monitor3, monitor4]
@@ -88,7 +90,7 @@ for (let monitor of monitores) {
 `
 }
 let carro_de_compra = document.getElementById("carro_de_compra")
-carro_de_compra.innerHTML+=`<section class="shopping-cart">
+carro_de_compra.innerHTML += `<section class="shopping-cart">
 <div class="container">
     <h1 class="text-center">CARRITO</h1>
     <div class="row">
@@ -114,42 +116,16 @@ carro_de_compra.innerHTML+=`<section class="shopping-cart">
         <div class="col-12">
             <div class="shopping-cart-total d-flex align-items-center">
                 <p class="mb-0">Total</p>
-                <p class="ml-4 mb-0 shoppingCartTotal">0€</p>
+                <p class="ml-4 mb-0 shoppingCartTotal">0$</p>
                 <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
                     data-delay="2000">
-                    <div class="toast-header">
-                        <span>✅</span>
-                        <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
-                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="toast-body text-white">
-                        Se aumentó correctamente la cantidad
-                    </div>
                 </div>
                 <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
                     data-target="#comprarModal">Comprar</button>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="comprarModalLabel">Gracias por su compra</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Pronto recibirá su pedido</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
+    </div>
         </div>
     </div>
 </div>
@@ -159,7 +135,15 @@ carro_de_compra.innerHTML+=`<section class="shopping-cart">
 const botonesAñadirAlCarrito = document.querySelectorAll('.addToCart');
 botonesAñadirAlCarrito.forEach((añadirBoton) => {
   añadirBoton.addEventListener('click', addToCartClicked);
+  añadirBoton.addEventListener("click", () => {
+    Toastify({
+      text: "Se ha añadido el producto al carrito correctamente",
+      duration: 3000
+    }).showToast();
+  });
+
 });
+
 
 const comprarButton = document.querySelector('.comprarButton');
 comprarButton.addEventListener('click', comprarButtonClicked);
@@ -272,4 +256,9 @@ function quantityChanged(event) {
 function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
+  Swal.fire({
+    title: "Su compra se realizó con éxito",
+    icon: "success",
+  })
 }
+
