@@ -129,7 +129,6 @@ carro_de_compra.innerHTML += `<section class="shopping-cart">
         </div>
     </div>
 </div>
-
 </section>`
 
 const botonesAñadirAlCarrito = document.querySelectorAll('.addToCart');
