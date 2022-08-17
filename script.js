@@ -1,4 +1,3 @@
-
 const botonDarkMode = document.getElementById("botonDarkMode")
 const botonLightMode = document.getElementById("botonLightMode")
 let darkMode
@@ -18,6 +17,26 @@ botonDarkMode.addEventListener("click", () => {
 botonLightMode.addEventListener("click", () => {
   document.body.classList.remove("darkMode")
   localStorage.setItem("theme", "light")
+})
+
+let prodprox = document.getElementById("ProductosProximos")
+fetch('productos.json').then(function (response) {
+  response.json().then(function (data) {
+    for (let producto of data) {
+      ProductosProximos.innerHTML += `
+  <div class="row-md-6 col-md-6">
+  <div class="col-12 col-md-6">
+      <div class="item shadow mb-4">
+          <h3 class="item-title">${producto.nombre}</h3>
+          <h3>${producto.precio_coutas}</h3>
+          <img class="item-image" src=${producto.imagen}>
+          <div class="item-details">
+              <h4 class="item-price">$${producto.precio}</h4>
+          </div>
+      </div>
+  </div>
+`}
+  })
 })
 
 class Producto {
@@ -260,4 +279,3 @@ function comprarButtonClicked() {
     icon: "success",
   })
 }
-
