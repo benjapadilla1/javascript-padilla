@@ -1,25 +1,25 @@
 [
     {
-        "nombre": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER", 
-        "precio": 1009000, 
-        "precio_coutas": "12 cuotas sin interés de $110.990", 
-        "imagen":"fotos/laptop_1.png" 
+        "nombre": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 1TB 16 SILVER",
+        "precio": 1009000,
+        "precio_coutas": "12 cuotas sin interés de $110.990",
+        "imagen": "fotos/laptop_1.png"
     },
     {
-        "nombre": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 512GB 16 SPACE GREY", 
-        "precio": 969990, 
-        "precio_coutas": "12 cuotas sin interés de $106.698,92", 
+        "nombre": "NOTEBOOK APPLE MACBOOK PRO M1 PRO 16GB 512GB 16 SPACE GREY",
+        "precio": 969.990,
+        "precio_coutas": "12 cuotas sin interés de $106.698,92",
         "imagen": "fotos/laptop_2.png"
     },
     {
         "nombre": "NOTEBOOK GIGABYTE AERO XE5 I7 12700H 16GB SSD 1TB + 1TB RTX 3070TI 16 W11",
-        "precio": 329169,
+        "precio": 329.169,
         "precio_coutas": "12 cuotas sin interés de $85.578,92",
         "imagen": "fotos/laptop_3.png"
     },
     {
         "nombre": "NOTEBOOK GIGABYTE AERO 16 KE5 I7 12700H 16GB SSD 1TB RTX 3070TI P 16 W11",
-        "precio": 334949,
+        "precio": 334.949,
         "precio_coutas": "12 cuotas sin interés de $83.598,92",
         "imagen": "fotos/laptop_4.png"
     }

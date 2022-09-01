@@ -1,21 +1,40 @@
-body{
+body {
   background-color: rgba(169, 145, 56, 0);
   color: black;
   transition: ease 1s;
 }
-.darkMode{
+
+.row-md-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.darkMode {
   background-color: black;
   color: white;
 }
-h1{
-  text-align: center; 
+
+h1 {
+  text-align: center;
 }
-#PlacasDeVideo , #Monitores ,#ProductosProximos{
+
+
+
+#titulo-carrito {
+  font-size: large;
+  margin-bottom: 250px;
+  width: 250px;
+}
+
+#PlacasDeVideo,
+#Monitores,
+#ProductosProximos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.div_padre{
+
+.div_padre {
   border: 2px solid rgb(147, 29, 29);
   width: 400px;
   height: 400px;
@@ -24,32 +43,46 @@ h1{
   background-color: burlywood;
   border-radius: 5px;
 }
-h3{
+
+h3 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
 }
-strong{
+
+strong {
   display: flex;
   justify-content: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: medium;
 }
-img{
+
+img {
   max-width: 100%;
   height: 100%;
 }
-.imagen{
-  text-align: center;
+
+@media screen and (max-width:700px) {
+  .shopping-cart-image {
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  .shopping-cart,
+  .div_padre {
+    max-width: 50%;
+  }
 }
+
 footer {
   font-size: 20px;
   margin-top: 5%;
   text-align: right;
   font-style: italic;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.estilo_compra{
+
+.estilo_compra {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -58,5 +91,5 @@ footer {
   width: 200px;
   height: 75px;
   border-radius: 10px;
-  background-color:burlywood;
+  background-color: burlywood;
 }
